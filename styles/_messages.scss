@@ -1,5 +1,6 @@
 .messages {
-    display: none;
+    display: flex;
+    justify-content: center;
     position: absolute;
 
     width: 100%;
@@ -8,4 +9,18 @@
     background-color: rgba(0,0,0,0.75);
 
     z-index: 10;
+    i {
+        margin-top: 8vh;
+        color: white;
+        font-size: 2em;
+        height: 30px;
+        
+        cursor: pointer;
+
+        transition: 0.3s transform ease-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
