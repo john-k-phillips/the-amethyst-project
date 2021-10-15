@@ -32,7 +32,7 @@
 }
 
 .score-container p {
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.644);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.342);
 }
 
 @media screen and (min-width: 1440px) {
