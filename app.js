@@ -9,6 +9,6 @@ const clickHandler = (isOpening) => {
         messageContainer.style.opacity = "0";
         setTimeout(() => {
             messageContainer.style.display = 'none';
-        }, 120)
+        }, 200)
     }
 }
