@@ -77,17 +77,18 @@
 }
 
 .messages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
   width: 100%;
   height: 100vh;
+  opacity: 0;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 10;
+  -webkit-transition: 0.3s opacity ease-out;
+  transition: 0.3s opacity ease-out;
 }
 
 .messages i {
