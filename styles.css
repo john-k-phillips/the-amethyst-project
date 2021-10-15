@@ -166,6 +166,10 @@
   color: #64DED7;
 }
 
+.message-list .content-container:nth-child(odd) p {
+  color: #FFB6C1;
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;

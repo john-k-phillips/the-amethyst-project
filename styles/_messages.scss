@@ -65,4 +65,9 @@
             color: $shambles-color;
         }
     }
+    .content-container:nth-child(odd) {
+        p {
+                color: $amy-color;
+        }
+    }
 }
