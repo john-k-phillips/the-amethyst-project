@@ -35,6 +35,32 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.342);
 }
 
+.dialog-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.dialog-container i {
+  padding: 1em;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.342);
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.342);
+  background-color: #363636;
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: bold;
+  height: 45px;
+}
+
 @media screen and (min-width: 1440px) {
   .divide {
     max-width: 10px;
