@@ -1,5 +1,7 @@
 .shambles-container, .amy-container {
     width: 100%;
+    display: grid;
+    place-items: center;
 }
 
 .shambles-container {
@@ -12,10 +14,23 @@
     height: 50%;
 }
 
+.nametag {
+    display: none;
+}
+
+// DIVIDE SECTION
 .divide {
     background-color: $primary;
     width: 100%;
     min-height: 10px;
+}
+
+.score-container {
+    font-size: 144px;
+    color: $primary;
+    p {
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.514);
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -27,5 +42,8 @@
     }
     .amy-container {
         height: 100%;
+    }
+    .nametag {
+        display: block;
     }
 }
