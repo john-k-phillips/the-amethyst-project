@@ -43,6 +43,7 @@
 }
 
 .divide .dialog-container i {
+  cursor: pointer;
   position: relative;
   top: 10px;
   background-color: #363636;
