@@ -1,72 +1,68 @@
+// CONTAINER
 .shambles-container, .amy-container {
+    height: 100%;
     width: 100%;
+
     display: grid;
     place-items: center;
 }
 
 .shambles-container {
     background-color: $shambles-color;
-    height: 50%;
 }
 
 .amy-container {
     background-color: $amy-color;
-    height: 50%;
 }
 
-.nametag {
+// CONTAINER CONTENT
+.score-container {
+    font-size: 144px;
+}
+
+.nametag { 
     display: none;
 }
 
-// DIVIDE SECTION
+// DIVIDER CONTAINER
+
 .divide {
     background-color: $primary;
     width: 100%;
-    min-height: 10px;
-}
+    height: 100%;
+    max-height: 10px;
+    .dialog-container {
+        position: absolute;
+        top: -10px;
 
-.score-container {
-    font-size: 144px;
-    color: $primary;
-    p {
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.342);
-    }
-}
-
-.dialog-container {
-    display: flex;
-    justify-content: center;
-
-    position: absolute;
-    top: 0;
-
-    width: 100%;
-
-    i {
-       padding: 1em;
-       border-bottom-left-radius: 2em;
-       border-bottom-right-radius: 2em;
-       box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.342);
-       background-color: $primary; 
-       position: absolute;
-       top: -10px;
-       color: white;
-       font-size: bold;
-       height: 45px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        i {
+            position: relative;
+            top: 10px;
+            background-color: $primary;
+            color: white;
+            font-size: 1.2em;
+            padding: 0.3em 0.6em 0.5em;
+            border-bottom-left-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
+        }
     }
 }
 
 @media screen and (min-width: 1440px) {
     .divide {
         max-width: 10px;
-    }
-    .shambles-container {
-        height: 100%;
-    }
-    .amy-container {
-        height: 100%;
-    }
-    .nametag {
-        display: block;
+        max-height: 100%;
+        .dialog-container {
+            width: auto;
+            position: relative;
+            i {
+                top: 5;
+                padding: 0.5em;
+                font-size: 1.5em;
+            }
+        }
     }
 }
