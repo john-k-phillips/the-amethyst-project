@@ -17,3 +17,10 @@ body {
 
     font-family: 'Londrina Solid', cursive;
 }
+
+// THESE WILL CHANGE VALUES BASED ON A SCREEN SIZE ABOVE 1440px
+@media screen and (min-width: 1440px) {
+    body {
+        flex-direction: row;
+    }
+}

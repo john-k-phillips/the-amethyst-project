@@ -1,4 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;400&display=swap");
+.shambles-container, .amy-container {
+  width: 100%;
+}
+
+.shambles-container {
+  background-color: #64DED7;
+  height: 50%;
+}
+
+.amy-container {
+  background-color: #FFB6C1;
+  height: 50%;
+}
+
+.divide {
+  background-color: #363636;
+  width: 100%;
+  min-height: 10px;
+}
+
+@media screen and (min-width: 1440px) {
+  .divide {
+    max-width: 10px;
+  }
+  .shambles-container {
+    height: 100%;
+  }
+  .amy-container {
+    height: 100%;
+  }
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -17,5 +49,14 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: 'Londrina Solid', cursive;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

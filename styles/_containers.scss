@@ -1,0 +1,31 @@
+.shambles-container, .amy-container {
+    width: 100%;
+}
+
+.shambles-container {
+    background-color: $shambles-color;
+    height: 50%;
+}
+
+.amy-container {
+    background-color: $amy-color;
+    height: 50%;
+}
+
+.divide {
+    background-color: $primary;
+    width: 100%;
+    min-height: 10px;
+}
+
+@media screen and (min-width: 1440px) {
+    .divide {
+        max-width: 10px;
+    }
+    .shambles-container {
+        height: 100%;
+    }
+    .amy-container {
+        height: 100%;
+    }
+}
