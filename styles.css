@@ -77,22 +77,28 @@
 }
 
 .messages {
-  display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   width: 100%;
   height: 100vh;
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.85);
   z-index: 10;
   -webkit-transition: 0.3s opacity ease-out;
   transition: 0.3s opacity ease-out;
 }
 
 .messages i {
-  margin-top: 8vh;
+  margin-top: 5vh;
   color: white;
   font-size: 2em;
   height: 30px;
@@ -106,6 +112,58 @@
 .messages i:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.message-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  gap: 2em;
+  margin-top: 5vh;
+  overflow: scroll;
+  padding-bottom: 1em;
+}
+
+.message-list::-webkit-scrollbar {
+  display: none;
+}
+
+.message-list .message-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5em;
+}
+
+.message-list .message-card .content-container {
+  background-color: #363636;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 90%;
+  margin: auto;
+  border-radius: 0.5em;
+  text-align: justify;
+  padding: 1em;
+}
+
+.message-list .message-card h3 {
+  font-weight: 500;
+  font-size: 3em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: -0.5em;
+}
+
+.message-list .message-card p {
+  color: #64DED7;
 }
 
 *, *::after, *::before {
