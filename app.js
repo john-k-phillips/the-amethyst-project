@@ -1,3 +1,6 @@
+let amyScore = 0;
+let shambleScore = 0;
+
 const messageList = document.querySelector('.message-list');
 
 fetch('https://the-amethyst-project-default-rtdb.europe-west1.firebasedatabase.app/data.json')
@@ -5,11 +8,23 @@ fetch('https://the-amethyst-project-default-rtdb.europe-west1.firebasedatabase.a
     .then(data => {
         data.forEach((day, index) => {
             generateMessage(day.firstMessage, day.amyMessage, day.shamblesMessage, index + 1);
+            if (day.pointTo === 'amy') {
+                amyScore++;
+            } else {
+                shambleScore++;
+            }
         })
+
+        const shamblesScorePT = document.querySelector('#shambles-score');
+        const amyScorePT = document.querySelector('#amy-score');
+
+        shamblesScorePT.innerHTML = shambleScore
+        amyScorePT.innerHTML = amyScore
     });
 
 const clickHandler = (isOpening) => {
     const messageContainer = document.querySelector('.messages');
+
     if (isOpening) {
         messageContainer.style.display = 'flex';
         setTimeout(() => {
@@ -48,7 +63,6 @@ const generateMessage = (firstMessage, amyMsg, shamblesMsg, day) => {
     dayHeading.innerHTML = `DAY ${day}`;
     shamblesText.innerHTML = shamblesMsg;
     amyText.innerHTML = amyMsg;
-
     amyName.innerHTML = 'AMY';
     shamblesName.innerHTML = 'SHAMBLES';
 
