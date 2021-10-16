@@ -55,6 +55,17 @@
     }
 }
 
+.vs {
+    display: none;
+    position: absolute;
+    top: 470px;
+    margin-left: 1em;
+    font-size: 50px;
+    letter-spacing: 1em;
+
+    z-index: 5;
+}
+
 @media screen and (min-width: 1440px) {
     .divide {
         max-width: 10px;
@@ -68,5 +79,8 @@
                 font-size: 1.5em;
             }
         }
+    }
+    .vs {
+        display: block;
     }
 }

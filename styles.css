@@ -58,6 +58,16 @@
   padding-top: 1.3em;
 }
 
+.vs {
+  display: none;
+  position: absolute;
+  top: 470px;
+  margin-left: 1em;
+  font-size: 50px;
+  letter-spacing: 1em;
+  z-index: 5;
+}
+
 @media screen and (min-width: 1440px) {
   .divide {
     max-width: 10px;
@@ -71,6 +81,9 @@
     top: 5;
     padding: 0.5em;
     font-size: 1.5em;
+  }
+  .vs {
+    display: block;
   }
 }
 
@@ -209,6 +222,15 @@ p {
   left: 0;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
+}
+
+.nametag:hover {
+  margin-left: 0;
+  padding-left: 3em;
+  border-radius: 0em 0.5em 0.5em 0em;
 }
 
 .nametag h3 {
@@ -216,6 +238,11 @@ p {
   padding: 0;
   text-align: center;
   font-size: 1.8em;
+}
+
+.nametag h3 a {
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (min-width: 1440px) {
@@ -226,6 +253,12 @@ p {
     left: auto;
     margin-left: auto;
     margin-right: 1vw;
+  }
+  .amytag:hover {
+    margin-right: 0;
+    padding-left: 1.5em;
+    padding-right: 3em;
+    border-radius: 0.5em 0em 0em 0.5em;
   }
 }
 
