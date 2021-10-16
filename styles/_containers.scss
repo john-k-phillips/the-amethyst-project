@@ -5,6 +5,7 @@
 
     display: grid;
     place-items: center;
+    position: relative;
 }
 
 .shambles-container {
@@ -18,10 +19,6 @@
 // CONTAINER CONTENT
 .score-container {
     font-size: 144px;
-}
-
-.nametag { 
-    display: none;
 }
 
 // DIVIDER CONTAINER
@@ -50,6 +47,7 @@
             border-bottom-right-radius: 0.5em;
 
             transition: 0.15s padding ease-out;
+            z-index: 5;
             &:hover {
                 padding-top: 1.3em;
             }

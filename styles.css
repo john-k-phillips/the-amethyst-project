@@ -5,6 +5,7 @@
   display: -ms-grid;
   display: grid;
   place-items: center;
+  position: relative;
 }
 
 .shambles-container {
@@ -17,10 +18,6 @@
 
 .score-container {
   font-size: 144px;
-}
-
-.nametag {
-  display: none;
 }
 
 .divide {
@@ -54,6 +51,7 @@
   border-bottom-right-radius: 0.5em;
   -webkit-transition: 0.15s padding ease-out;
   transition: 0.15s padding ease-out;
+  z-index: 5;
 }
 
 .divide .dialog-container i:hover {
@@ -196,6 +194,38 @@ p {
   .message-card h3 {
     margin-left: 0.6em;
     margin-right: 0.6em;
+  }
+}
+
+.nametag {
+  display: none;
+  position: absolute;
+  padding: 0.5em 1.5em;
+  margin-top: 2vh;
+  margin-left: 1vw;
+  background-color: #363636;
+  border-radius: 0.5em;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.nametag h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+@media screen and (min-width: 1440px) {
+  .nametag {
+    display: inline;
+  }
+  .amytag {
+    left: auto;
+    margin-left: auto;
+    margin-right: 1vw;
   }
 }
 
