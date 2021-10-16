@@ -77,9 +77,7 @@
 }
 
 .messages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -90,7 +88,7 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  opacity: 1;
+  opacity: 0;
   background-color: rgba(0, 0, 0, 0.85);
   z-index: 10;
   -webkit-transition: 0.3s opacity ease-out;
@@ -147,6 +145,10 @@
   color: #FFB6C1;
 }
 
+.message-list .shambles p {
+  color: #64DED7;
+}
+
 .content-container {
   background-color: #363636;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -156,6 +158,7 @@
   text-align: justify;
   padding: 1em;
   max-width: 600px;
+  border-radius: 0.5em;
 }
 
 h3 {
@@ -167,7 +170,7 @@ h3 {
 }
 
 p {
-  color: #64DED7;
+  color: #363636;
 }
 
 @media screen and (min-width: 1440px) {

@@ -12,3 +12,8 @@ const clickHandler = (isOpening) => {
         }, 200)
     }
 }
+
+
+fetch('https://the-amethyst-project-default-rtdb.europe-west1.firebasedatabase.app/data.json')
+    .then(response => response.json())
+    .then(data => console.log(data));
