@@ -88,7 +88,9 @@
 }
 
 .messages {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -99,7 +101,7 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  opacity: 0;
+  opacity: 1;
   background-color: rgba(0, 0, 0, 0.85);
   z-index: 10;
   -webkit-transition: 0.3s opacity ease-out;
@@ -260,6 +262,11 @@ p {
     padding-right: 3em;
     border-radius: 0.5em 0em 0em 0.5em;
   }
+}
+
+.point-container {
+  color: lightgreen;
+  text-align: right;
 }
 
 *, *::after, *::before {

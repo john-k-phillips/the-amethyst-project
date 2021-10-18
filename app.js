@@ -7,7 +7,7 @@ fetch('https://the-amethyst-project-default-rtdb.europe-west1.firebasedatabase.a
     .then(response => response.json())
     .then(data => {
         data.forEach((day, index) => {
-            generateMessage(day.firstMessage, day.amyMessage, day.shamblesMessage, index + 1);
+            generateMessage(day.firstMessage, day.amyMessage, day.shamblesMessage, index + 1, day.pointTo);
             if (day.pointTo === 'amy') {
                 amyScore++;
             } else {
@@ -38,7 +38,7 @@ const clickHandler = (isOpening) => {
     }
 }
 
-const generateMessage = (firstMessage, amyMsg, shamblesMsg, day) => {
+const generateMessage = (firstMessage, amyMsg, shamblesMsg, day, pointTo) => {
     // DEFINE ELEMENTS
     const messageCard = document.createElement('div');
     const dayHeading = document.createElement('h3');
@@ -49,6 +49,7 @@ const generateMessage = (firstMessage, amyMsg, shamblesMsg, day) => {
     const amyText = document.createElement('p');
     const amyName = document.createElement('span');
 
+    const whosPoint = document.createElement('div');
 
 
     // DEFINE CLASSES
@@ -58,6 +59,7 @@ const generateMessage = (firstMessage, amyMsg, shamblesMsg, day) => {
     amyContentContainer.classList.add('amy')
     amyContentContainer.classList.add('content-container')
     amyName.classList.add('indent-amy');
+    whosPoint.classList.add('point-container');
 
     // ADD CONTENT
     dayHeading.innerHTML = `DAY ${day}`;
@@ -65,6 +67,7 @@ const generateMessage = (firstMessage, amyMsg, shamblesMsg, day) => {
     amyText.innerHTML = amyMsg;
     amyName.innerHTML = 'AMY';
     shamblesName.innerHTML = 'SHAMBLES';
+    whosPoint.innerHTML = '+1';
 
     if (window.screen.width > 1440) {
         if (firstMessage == 'shambles') {
@@ -82,8 +85,16 @@ const generateMessage = (firstMessage, amyMsg, shamblesMsg, day) => {
     messageCard.appendChild(shamblesContentContainer)
     shamblesContentContainer.appendChild(shamblesName);
     shamblesContentContainer.appendChild(shamblesText);
+    if (pointTo === 'shambles') {
+        shamblesContentContainer.appendChild(whosPoint);
+    }
     messageCard.appendChild(amyContentContainer);
     amyContentContainer.appendChild(amyName);
     amyContentContainer.appendChild(amyText);
+    if (pointTo === 'amy') {
+        amyContentContainer.appendChild(whosPoint);
+    }
     messageList.appendChild(messageCard);
+
+
 }
