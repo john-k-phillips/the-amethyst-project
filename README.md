@@ -2,7 +2,7 @@
 <p>
   This website is a scoreboard of the best, silly (random) messages sent each day. The messages are sent by two people and uploaded to a firebase database.
   
-  This is a random little project made with love by both myself and a friend. 
+  This is a random little project made with love by both myself and a <a href="https://github.com/ShammyBalls" target="_blank">friend.</a>
   
   The initial objective of this project was to help teach a friend by building a website. 
 </p>
